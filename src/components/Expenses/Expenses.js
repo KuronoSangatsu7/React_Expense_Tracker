@@ -1,7 +1,5 @@
 const Expenses = () => {
-    return (<div>
-        khra
-    </div>)
-}
+  return <div>Expenses</div>;
+};
 
 export default Expenses;
