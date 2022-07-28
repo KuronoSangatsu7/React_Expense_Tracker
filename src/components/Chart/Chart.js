@@ -1,7 +1,7 @@
+import TransparentWrapper from "../UI/TransparentWrapper";
+
 const Chart = () => {
-    return (
-        <div className="bg-violet-300/10 rounded-md p-2">Hi</div>
-    )
-}
+  return <TransparentWrapper>Hi</TransparentWrapper>;
+};
 
 export default Chart;

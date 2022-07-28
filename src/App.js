@@ -3,6 +3,7 @@ import AppWrapper from "./components/UI/AppWrapper";
 import Chart from "./components/Chart/Chart";
 import Expenses from "./components/Expenses/Expenses";
 import Header from "./components/UI/Header";
+import NewExpense from "./components/NewExpense/NewExpense";
 
 const App = () => {
   const expenses = [
@@ -42,7 +43,7 @@ const App = () => {
           <Chart />
           <Expenses items={expenses}/>
           <div className="flex flex-row-reverse">
-            <button className="bg-gray-200 font-medium text-lg py-2 px-4 rounded-md">Add Expense</button>
+            <button className="bg-gray-200 font-medium text-lg py-2 px-4 rounded-md">New Expense</button>
           </div>
         </AppWrapper>
       </FullWrapper>
