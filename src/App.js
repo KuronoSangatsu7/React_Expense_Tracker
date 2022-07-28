@@ -31,6 +31,14 @@ const App = () => {
       <FullWrapper>
         <Header />
         <AppWrapper>
+          <div className="flex flex-row-reverse">
+            <select className="bg-gray-200 font-normal text-lg py-1 px-2 mb-4 rounded-md">
+            <option>2022</option>
+            <option>2021</option>
+            <option>2020</option>
+            <option>2019</option>
+            </select>
+          </div>
           <Chart />
           <Expenses items={expenses}/>
           <div className="flex flex-row-reverse">
