@@ -3,10 +3,12 @@ import Expenses from "./components/Expenses/Expenses";
 import Header from "./components/UI/Header";
 
 const App = () => {
-  return <Wrapper>
-    <Header></Header>
+  return <>
+  <Header></Header>
+  <Wrapper>
     <Expenses />
   </Wrapper>
+  </>
 };
 
 export default App;
