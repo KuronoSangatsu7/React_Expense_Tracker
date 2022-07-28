@@ -4,7 +4,7 @@ const ExpenseDate = (props) => {
   return (
     <div className="container border rounded-md bg-gray-200 text-xs py-2">
       <div className="text-center">{day}</div>
-      <div className="text-center">{month}</div>
+      <div className="text-center font-semibold">{month}</div>
     </div>
   );
 };

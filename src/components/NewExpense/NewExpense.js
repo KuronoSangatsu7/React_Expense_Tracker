@@ -2,7 +2,7 @@ import TransparentWrapper from "../UI/TransparentWrapper";
 
 import { useState } from "react";
 
-const NewExpense = () => {
+const NewExpense = (props) => {
   const [enteredTitle, setEnteredTitle] = useState("");
   const [enteredDate, setEnteredDate] = useState("");
   const [enteredAmount, setEnteredAmount] = useState("");
@@ -22,12 +22,17 @@ const NewExpense = () => {
   const submitHandler = (event) => {
     event.preventDefault();
     const newExpense = {
+      id: Math.random(),
       title: enteredTitle,
-      date: enteredDate,
+      date: new Date(enteredDate),
       amount: enteredAmount,
     };
 
-    console.log(newExpense);
+    props.onAddExpense(newExpense);
+
+    setEnteredTitle('');
+    setEnteredAmount('');
+    setEnteredDate('');
   };
 
   return (
