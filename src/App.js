@@ -28,6 +28,8 @@ const App = () => {
     );
   }, [selectedYear, expenses]);
 
+  console.log(expenses, displayedExpenses)
+
   return (
     <>
       <FullWrapper>
@@ -38,7 +40,7 @@ const App = () => {
             selected={selectedYear}
             onChangeFilter={filterChangeHandler}
           />
-          <Chart />
+          <Chart expenses={displayedExpenses}/>
           <Expenses items={displayedExpenses} />
           <div className="flex flex-row-reverse">
             <button className="bg-gray-200 font-medium text-lg py-2 px-4 mt-2 rounded-md">
