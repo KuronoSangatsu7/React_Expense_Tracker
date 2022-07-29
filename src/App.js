@@ -5,6 +5,7 @@ import Expenses from "./components/Expenses/Expenses";
 import Header from "./components/UI/Header";
 import NewExpense from "./components/NewExpense/NewExpense";
 import ExpenseFilter from "./components/Expenses/ExpenseFilter";
+import NewExpenseButton from "./components/NewExpense/NewExpenseButton";
 import { useEffect, useState } from "react";
 
 const App = () => {
@@ -31,7 +32,6 @@ const App = () => {
   console.log(expenses, displayedExpenses)
 
   return (
-    <>
       <FullWrapper>
         <Header />
         <AppWrapper>
@@ -42,14 +42,9 @@ const App = () => {
           />
           <Chart expenses={displayedExpenses}/>
           <Expenses items={displayedExpenses} />
-          <div className="flex flex-row-reverse">
-            <button className="bg-gray-200 font-medium text-lg py-2 px-4 mt-2 rounded-md">
-              New Expense
-            </button>
-          </div>
+          <NewExpenseButton />
         </AppWrapper>
       </FullWrapper>
-    </>
   );
 };
 

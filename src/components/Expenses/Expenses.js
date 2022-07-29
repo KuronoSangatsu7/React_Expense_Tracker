@@ -5,7 +5,7 @@ const Expenses = (props) => {
 
 
   return (
-    <div>
+    <div className="overflow-scroll h-64 mt-4 scroll-smooth snap-y">
       {props.items.length === 0 && <p className="m-2 text-white font-semibold">No expenses in this year.</p>}
       {props.items.map((item) => (
         <ExpenseItem
