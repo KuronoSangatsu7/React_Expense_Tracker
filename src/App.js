@@ -12,16 +12,23 @@ const App = () => {
   const [selectedYear, setSelectedYear] = useState(2022);
   const [expenses, setExpenses] = useState([]);
   const [displayedExpenses, setDisplayedExpenses] = useState([]);
+  const [addingExpense, setAddingExpense] = useState(false);
 
   const addExpenseHandler = (expense) => {
     setExpenses((prevState) => {
       return [...prevState, expense];
     });
+    setAddingExpense(false)
   };
 
   const filterChangeHandler = (newSelection) => {
     setSelectedYear(newSelection);
   };
+
+  const newExpenseHandler = () => {
+    setAddingExpense(true)
+    console.log(addingExpense)
+  }
 
   useEffect(() => {
     setDisplayedExpenses(
@@ -29,20 +36,18 @@ const App = () => {
     );
   }, [selectedYear, expenses]);
 
-  console.log(expenses, displayedExpenses)
-
   return (
       <FullWrapper>
         <Header />
         <AppWrapper>
-          <NewExpense onAddExpense={addExpenseHandler} />
+          {addingExpense && <NewExpense onAddExpense={addExpenseHandler} />}
           <ExpenseFilter
             selected={selectedYear}
             onChangeFilter={filterChangeHandler}
           />
           <Chart expenses={displayedExpenses}/>
           <Expenses items={displayedExpenses} />
-          <NewExpenseButton />
+          <NewExpenseButton onClicked={newExpenseHandler}/>
         </AppWrapper>
       </FullWrapper>
   );
