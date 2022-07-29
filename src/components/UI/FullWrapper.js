@@ -8,7 +8,7 @@ const FullWrapper = (props) => {
         backgroundImage: `url(${BackgroundImage})`,
         backgroundClip: "content-box",
         backgroundPosition: "center",
-        backgroundSize: "100% 100%",
+        backgroundSize: "cover",
       }}
     >
       {props.children}
