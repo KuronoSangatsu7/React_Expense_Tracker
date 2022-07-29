@@ -49,11 +49,13 @@ const Chart = (props) => {
   ));
 
   return (
+    <div className="hidden xl:block">
     <TransparentWrapper>
       <div className="flex flex-nowrap">
       {chartContent}
       </div>
     </TransparentWrapper>
+    </div>
   );
 };
 
