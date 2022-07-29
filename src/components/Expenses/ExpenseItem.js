@@ -7,7 +7,7 @@ const ExpenseItem = (props) => {
       <ExpenseDate date={props.date} />
       </div>
       <div className="col-span-9 text-white font-medium ml-2 my-auto">{props.title}</div>
-      <div className="col-span-2 text-rose-600 text-right my-auto font-semibold">${props.amount}</div>
+      <div className="col-span-2 text-rose-600 text-right my-auto font-semibold ml-auto">${props.amount}</div>
     </div>
   );
 };

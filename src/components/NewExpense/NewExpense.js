@@ -39,7 +39,7 @@ const NewExpense = (props) => {
     <div className="mb-4">
       <TransparentWrapper>
         <form onSubmit={submitHandler}>
-          <div className="flex flex-wrap md:grid grid-cols-2 grid-rows-5 grid-flow-column-dense gap-3 m-2 text-gray-200 font-medium mt-0">
+          <div className="flex flex-wrap lg:grid grid-cols-2 grid-rows-5 gap-3 m-2 text-gray-200 font-medium mt-0">
             <label className="col-span-2 my-auto">Title:</label>
             <input
               className="col-span-2 flex-auto w-full rounded-md text-black font-medium p-2"
@@ -49,7 +49,7 @@ const NewExpense = (props) => {
             ></input>
             <label>Date: </label>
             <input
-              className="rounded-md text-black font-medium p-2"
+              className="rounded-md text-black font-medium p-2 w-full"
               value={enteredDate}
               onChange={dateChangeHandler}
               type="date"
