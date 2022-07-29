@@ -66,7 +66,7 @@ const NewExpense = (props) => {
               step="0.01"
             ></input>
             <button
-              className=" col-start-2 ml-auto bg-violet-400 p-2 rounded-md"
+              className=" col-start-2 ml-auto bg-violet-600 p-2 rounded-md"
               type="submit"
             >
               Add Expense
