@@ -27,7 +27,6 @@ const App = () => {
 
   const newExpenseHandler = () => {
     setAddingExpense(true)
-    console.log(addingExpense)
   }
 
   useEffect(() => {
@@ -40,7 +39,7 @@ const App = () => {
       <FullWrapper>
         <Header />
         <AppWrapper>
-          {addingExpense && <NewExpense onAddExpense={addExpenseHandler} />}
+          {addingExpense && <NewExpense onAddExpense={addExpenseHandler} onFormClosed={() => setAddingExpense(false)}/>}
           <ExpenseFilter
             selected={selectedYear}
             onChangeFilter={filterChangeHandler}
