@@ -46,6 +46,7 @@ const NewExpense = (props) => {
               value={enteredTitle}
               onChange={titleChangeHandler}
               type="text"
+              required
             ></input>
             <label>Date: </label>
             <input
@@ -55,6 +56,7 @@ const NewExpense = (props) => {
               type="date"
               min="2019-01-01"
               max="2022-12-31"
+              required
             ></input>
             <label>Amount:</label>
             <input
@@ -64,9 +66,10 @@ const NewExpense = (props) => {
               type="number"
               min="0.01"
               step="0.01"
+              required
             ></input>
             <button
-              className=" col-start-2 ml-auto bg-violet-600 p-2 rounded-md"
+              className=" col-start-2 ml-auto bg-violet-600 p-2 rounded-md hover:translate-y-1 hover:scale-110 hover:bg-violet-800 focus:ring-4 focus:ring-black transition-all duration-150"
               type="submit"
             >
               Add Expense
