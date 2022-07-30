@@ -3,6 +3,12 @@
 ### Overview:
 An Expense Tracker app built mainly to leverage knowledge in Tailwind CSS and responsive design, as well as the funemental concepts of React.
 
+### Deployments:
+
+The app has been deployed to vercel and can be interacted with at the following link: 
+
+https://react-expense-tracker-rho.vercel.app/
+
 ### Tech Stack:
 
 - **Frontend**: `React.js`, `Tailwind CSS`.
