@@ -1,5 +1,6 @@
 import TransparentWrapper from "../UI/TransparentWrapper";
 import ChartBar from "./ChartBar";
+import styles from './Chart.module.css'
 
 const Chart = (props) => {
   let totalSum = 0;
@@ -50,7 +51,7 @@ const Chart = (props) => {
 
   return (
     <TransparentWrapper>
-      <div className="flex flex-nowrap overflow-scroll sm:overflow-clip">
+      <div className={`flex flex-nowrap overflow-scroll sm:overflow-clip ${styles.noscroll}`}>
       {chartContent}
       </div>
     </TransparentWrapper>
